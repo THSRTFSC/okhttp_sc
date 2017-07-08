@@ -1,0 +1,16 @@
+ml
+.gradle
+/local.properties
+/.idea/workspace.xml
+/.idea/libraries
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+/demo/.idea
+/demo/gradle
+/demo/setting.gradle
+/demo/gradlew.bar
+/demo/gradlew
+/demo/gradle.properties
+
