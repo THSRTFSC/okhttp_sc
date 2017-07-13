@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              android:padding="@dimen/normal_padding">
+    <TextView
+        android:id="@+id/api_url_key"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:textStyle="bold"
+    />
+
+    <TextView
+        android:id="@+id/api_url_value"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/normal_margin"
+    />
+
+</LinearLayout>
