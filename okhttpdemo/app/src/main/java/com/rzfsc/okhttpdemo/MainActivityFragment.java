@@ -1,5 +1,7 @@
 package com.rzfsc.okhttpdemo;
 
+import android.graphics.drawable.Drawable;
+import android.graphics.drawable.GradientDrawable;
 import android.os.Handler;
 import android.os.Looper;
 import android.support.v4.app.Fragment;
@@ -83,6 +85,14 @@ public class MainActivityFragment extends Fragment {
         return title;
     }
 
+    private Drawable createItemBackground() {
+        GradientDrawable itemBg = new GradientDrawable(GradientDrawable.Orientation.LEFT_RIGHT, new int[]{0xFFFFFFFF, 0xFFAAAAAA});
+        itemBg.setGradientType(GradientDrawable.LINEAR_GRADIENT);
+        itemBg.setShape(GradientDrawable.RECTANGLE);
+        return itemBg;
+    }
+
+
     private void doOkHttpRequest() {
         OkHttpClient okHttpClient = new OkHttpClient();
         Request request = new Request.Builder()
@@ -154,6 +164,8 @@ public class MainActivityFragment extends Fragment {
             } else {
                 viewHolder = (ViewHolder) convertView.getTag();
             }
+
+            convertView.setBackground(createItemBackground());
             String[] keyVlaue = mAPIs.get(position);
             viewHolder.mURLKey.setText(keyVlaue[0]);
             viewHolder.mURLValue.setText(keyVlaue[1]);
