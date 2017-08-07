@@ -14,6 +14,12 @@ public class APIResult<T> {
 
     private T mContent;
 
+    public APIResult(int returnCode, String errorMessage, T content) {
+        this.mReturnCode = returnCode;
+        this.mErrorMessage = errorMessage;
+        this.mContent = content;
+    }
+
     public int getReturnCode() {
         return mReturnCode;
     }

@@ -16,6 +16,11 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.rzfsc.okhttpdemo.constants.Constants;
+import com.rzfsc.okhttpdemo.entity.APIResult;
+import com.rzfsc.okhttpdemo.okhttp.OkHttpConstants;
+import com.rzfsc.okhttpdemo.okhttp.OkHttpProxy;
+
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -94,35 +99,33 @@ public class MainActivityFragment extends Fragment {
 
 
     private void doOkHttpRequest() {
-        OkHttpClient okHttpClient = new OkHttpClient();
-        Request request = new Request.Builder()
-                .url(GITHUB_API)
-                .build();
+        APIResult result = OkHttpProxy.doGet(Constants.API_GITHUB);
+        if (result.getReturnCode() != OkHttpConstants.HTTP_REQUEST_RETURN_CODE_SUCCESS) {
+            Log.d(TAG, "doOkHttpRequest: " + result.getErrorMessage());
+            return;
+        }
+        String responseText = result.getContent().toString();
+        responseText = responseText.replace("{", "[").replace("}", "]");
+        responseText = "{" + responseText.substring(1, responseText.length() - 1) + "}";
+        Log.d(TAG, "doOkHttpRequest: response = " + responseText);
+        JSONObject jsonObject = null;
         try {
-            try (Response response = okHttpClient.newCall(request).execute()) {
-                String responseText = response.body().string();
-                responseText = responseText.replace("{", "[").replace("}", "]");
-                responseText = "{" + responseText.substring(1, responseText.length() - 1) + "}";
-                Log.d(TAG, "doOkHttpRequest: response = " + responseText);
-                JSONObject jsonObject = new JSONObject(responseText);
-                Iterator keys = jsonObject.keys();
-                String[] keyValues;
-                while (keys.hasNext()) {
-                    String key = (String) keys.next();
-                    if (jsonObject.has(key)) {
-                        String value = jsonObject.optString(key);
-                        value = value.replace("[", "{").replace("]", "}");
-                        keyValues = new String[] {key, value};
-                        mAPIs.add(keyValues);
-                    }
-                }
-                updateListView();
-            } catch (JSONException e) {
-                e.printStackTrace();
-            }
-        } catch (IOException e) {
+            jsonObject = new JSONObject(responseText);
+        } catch (JSONException e) {
             e.printStackTrace();
         }
+        Iterator keys = jsonObject.keys();
+        String[] keyValues;
+        while (keys.hasNext()) {
+            String key = (String) keys.next();
+            if (jsonObject.has(key)) {
+                String value = jsonObject.optString(key);
+                value = value.replace("[", "{").replace("]", "}");
+                keyValues = new String[]{key, value};
+                mAPIs.add(keyValues);
+            }
+        }
+        updateListView();
     }
 
     private void updateListView() {

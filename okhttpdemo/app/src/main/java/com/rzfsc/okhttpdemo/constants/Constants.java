@@ -8,5 +8,6 @@ package com.rzfsc.okhttpdemo.constants;
 
 public class Constants {
 
-    public static final long HTTP_REQUEST_TIMEOUT = 60 * 1000;
+    public static final String API_GITHUB = "https://api.github.com";
+
 }
