@@ -1,5 +1,7 @@
 package com.rzfsc.okhttpdemo.okhttp;
 
+import okhttp3.MediaType;
+
 /**
  * Copyright(c) 2017. LiBing Inc. All rights reserved.
  * <p>
@@ -15,4 +17,6 @@ public class OkHttpConstants {
     public static final int HTTP_REQUEST_RETURN_CODE_SUCCESS = 0;
 
     public static final String HTTP_REQUESET_SUCCESS_ERROR_MESSAGE = "request success";
+
+    public static final MediaType JSON = MediaType.parse("application/json; charset=utf-8");
 }
