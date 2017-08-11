@@ -9,4 +9,9 @@ import com.rzfsc.okhttpdemo.framework.BaseActivity;
  */
 
 public class LoginActivity extends BaseActivity {
+
+    @Override
+    public void setFragment() {
+        // TODO
+    }
 }

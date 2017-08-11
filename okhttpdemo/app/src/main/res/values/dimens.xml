@@ -3,4 +3,8 @@
     <dimen name="normal_padding">16dp</dimen>
     <dimen name="normal_margin">16dp</dimen>
     <dimen name="small_margin">8dp</dimen>
+
+    <dimen name="app_width_0dp">0dp</dimen>
+    <dimen name="app_height_0dp">@dimen/app_width_0dp</dimen>
+
 </resources>
