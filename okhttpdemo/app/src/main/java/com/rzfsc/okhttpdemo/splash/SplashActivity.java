@@ -18,13 +18,12 @@ public class SplashActivity extends BaseActivity {
 
     @Override
     public void setFragment() {
-        if (findViewById(R.id.fragment) != null) {
-            Log.d(TAG, "setFragment: add fragment");
-            SplashFragment splashFragment = (SplashFragment) getSupportFragmentManager().findFragmentById(R.id.fragment);
-            if (splashFragment == null) {
-                splashFragment = SplashFragment.newInstance();
-                ActivityUtils.addFragmentToActivity(getSupportFragmentManager(), splashFragment, R.id.fragment);
-            }
+        Log.d(TAG, "setFragment: add fragment");
+        SplashFragment splashFragment = (SplashFragment) getSupportFragmentManager().findFragmentById(R.id.fragment);
+        if (splashFragment == null) {
+            splashFragment = SplashFragment.newInstance();
+            ActivityUtils.addFragmentToActivity(getSupportFragmentManager(), splashFragment, R.id.fragment);
         }
+        new SplashPresenter(splashFragment);
     }
 }

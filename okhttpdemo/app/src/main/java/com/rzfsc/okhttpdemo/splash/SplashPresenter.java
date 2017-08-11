@@ -8,6 +8,12 @@ package com.rzfsc.okhttpdemo.splash;
 
 public class SplashPresenter implements SplashContract.Presenter {
 
+    private SplashContract.View mView;
+
+    public SplashPresenter(SplashContract.View view) {
+        mView.setPresenter(this);
+    }
+
     @Override
     public void start() {
         // TODO
