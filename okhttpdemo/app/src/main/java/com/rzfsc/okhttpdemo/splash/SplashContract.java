@@ -1,5 +1,7 @@
 package com.rzfsc.okhttpdemo.splash;
 
+import android.content.Context;
+
 import com.rzfsc.okhttpdemo.framework.BasePresenter;
 import com.rzfsc.okhttpdemo.framework.BaseView;
 
@@ -12,7 +14,7 @@ import com.rzfsc.okhttpdemo.framework.BaseView;
 public interface SplashContract {
 
     interface View extends BaseView<Presenter> {
-        // TODO
+
     }
 
     interface Presenter extends BasePresenter {

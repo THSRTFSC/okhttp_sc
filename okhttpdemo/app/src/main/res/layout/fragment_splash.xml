@@ -5,6 +5,7 @@
               android:orientation="vertical">
 
     <ImageView
+        android:id="@+id/iv_logo"
         android:layout_width="match_parent"
         android:layout_height="@dimen/app_height_0dp"
         android:layout_weight="0.618"
@@ -19,6 +20,8 @@
         <TextView
             android:id="@+id/tv_inc"
             android:layout_width="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="@color/colorBlack"
             android:layout_height="wrap_content"/>
 
     </RelativeLayout>
