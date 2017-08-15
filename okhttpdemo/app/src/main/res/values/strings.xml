@@ -4,5 +4,12 @@
     <string name="my_profile">My Profile</string>
 
     <string name="app_describe">This is mine, do you like it!</string>
+    <string name="user_name">Username</string>
+    <string name="user_password">Password</string>
+    <string name="forgot_password">Lost your password</string>
+    <string name="login_form">Login Form</string>
+    <string name="login">Log in</string>
+    <string name="copyright_describe">\@2017 All Rights Reserved. Alan Lee.</string>
+    <string name="logo_for_logo">MIME for mine</string>
 
 </resources>

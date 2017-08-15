@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:padding="@dimen/normal_padding"
+              android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tv_login_form"
+        android:layout_width="match_parent"
+        android:textColor="#73879C"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:text="@string/login_form"
+        android:layout_marginTop="@dimen/normal_padding"
+        android:paddingTop="@dimen/normal_padding"
+        android:paddingBottom="@dimen/normal_padding"
+        android:layout_height="wrap_content"/>
+
+    <EditText
+        android:id="@+id/et_user_account"
+        android:layout_width="match_parent"
+        android:hint="@string/user_name"
+        android:layout_height="wrap_content"/>
+
+    <EditText
+        android:id="@+id/et_password"
+        android:layout_width="match_parent"
+        android:hint="@string/user_password"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/normal_margin"
+        android:layout_marginBottom="@dimen/normal_margin"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btn_login"
+            android:layout_width="wrap_content"
+            android:text="@string/login"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/tv_forgot_password"
+            android:layout_width="wrap_content"
+            android:text="@string/forgot_password"
+            android:textColor="@color/colorBlack"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:background="#73879C"
+        android:layout_height="@dimen/height_1px"/>
+
+    <TextView
+        android:id="@+id/tv_create_account"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/tv_logo"
+        android:layout_width="match_parent"
+        android:text="@string/logo_for_logo"
+        android:textColor="@color/colorBlack"
+        android:gravity="center"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/tv_copyright"
+        android:layout_width="match_parent"
+        android:text="@string/copyright_describe"
+        android:textColor="@color/colorBlack"
+        android:gravity="center"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>
