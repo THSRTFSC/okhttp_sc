@@ -44,23 +44,19 @@ public class OkHttpProxy {
      */
     public static APIResult<JSONObject> doGet(String url) {
         Request request = new Request.Builder().url(url).build();
-        try {
-            try (Response response = mInstance.newCall(request).execute()) {
-                if (response.isSuccessful()) {
-                    String responseText = response.body().string();
-                    responseText = responseText.replace("{", "[").replace("}", "]");
-                    responseText = "{" + responseText.substring(1, responseText.length() - 1) + "}";
-                    Log.d(TAG, "doOkHttpRequest: response = " + responseText);
-                    JSONObject jsonObject = new JSONObject(responseText);
-                    return new APIResult<> (
-                            OkHttpConstants.HTTP_REQUEST_RETURN_CODE_SUCCESS,
-                            OkHttpConstants.HTTP_REQUESET_SUCCESS_ERROR_MESSAGE,
-                            jsonObject);
-                }
-            } catch (JSONException e) {
-                e.printStackTrace();
+        try (Response response = mInstance.newCall(request).execute()) {
+            if (response.isSuccessful()) {
+                String responseText = response.body().string();
+                responseText = responseText.replace("{", "[").replace("}", "]");
+                responseText = "{" + responseText.substring(1, responseText.length() - 1) + "}";
+                Log.d(TAG, "doOkHttpRequest: response = " + responseText);
+                JSONObject jsonObject = new JSONObject(responseText);
+                return new APIResult<>(
+                        OkHttpConstants.HTTP_REQUEST_RETURN_CODE_SUCCESS,
+                        OkHttpConstants.HTTP_REQUESET_SUCCESS_ERROR_MESSAGE,
+                        jsonObject);
             }
-        } catch (IOException e) {
+        } catch (JSONException | IOException e) {
             e.printStackTrace();
         }
         return null;
