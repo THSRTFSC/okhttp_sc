@@ -11,5 +11,7 @@
     <string name="login">Log in</string>
     <string name="copyright_describe">\@2017 All Rights Reserved. Alan Lee.</string>
     <string name="logo_for_logo">MIME for mine</string>
+    <string name="account_not_longer_enough">请输入至少8个字符！</string>
+    <string name="password_not_longer_enough">请输入至少20个字符！</string>
 
 </resources>

@@ -32,6 +32,6 @@ public interface LoginContract {
 
         boolean inputVerification(int inputType, String inputValue);
 
-        void login(String userAccount, String userPwd, Callback callback);
+        void login(String userAccount, String userPwd);
     }
 }

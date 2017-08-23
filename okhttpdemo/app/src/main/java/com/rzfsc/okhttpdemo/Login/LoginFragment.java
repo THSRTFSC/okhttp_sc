@@ -110,6 +110,9 @@ public class LoginFragment extends Fragment implements LoginContract.View, View.
         int viewId = v.getId();
         switch (viewId) {
             case R.id.btn_login:
+                String userAccount = mUserAccountEdit.getEditableText().toString();
+                String password = mPasswordEdit.getEditableText().toString();
+                mPresenter.login(userAccount, password);
                 break;
         }
     }

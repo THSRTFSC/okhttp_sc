@@ -21,12 +21,16 @@
         android:id="@+id/et_user_account"
         android:layout_width="match_parent"
         android:hint="@string/user_name"
+        android:textColor="@color/colorBlack"
+        android:textColorHint="@color/colorPrimary"
         android:layout_height="wrap_content"/>
 
     <EditText
         android:id="@+id/et_password"
         android:layout_width="match_parent"
         android:hint="@string/user_password"
+        android:textColor="@color/colorBlack"
+        android:textColorHint="@color/colorPrimary"
         android:layout_height="wrap_content"/>
 
     <LinearLayout
