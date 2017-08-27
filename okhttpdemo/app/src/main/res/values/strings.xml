@@ -13,5 +13,6 @@
     <string name="logo_for_logo">MIME for mine</string>
     <string name="account_not_longer_enough">请输入至少8个字符！</string>
     <string name="password_not_longer_enough">请输入至少20个字符！</string>
+    <string name="login_fail">登录失败，请重新检查用户名和密码！</string>
 
 </resources>

@@ -24,16 +24,9 @@ import com.rzfsc.okhttpdemo.okhttp.OkHttpProxy;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.io.IOException;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
-import java.util.Map;
-
-import okhttp3.OkHttpClient;
-import okhttp3.Request;
-import okhttp3.Response;
 
 import static android.content.ContentValues.TAG;
 
@@ -101,10 +94,10 @@ public class MainActivityFragment extends Fragment {
     private void doOkHttpRequest() {
         APIResult result = OkHttpProxy.doGet(Constants.API_GITHUB);
         if (result.getReturnCode() != OkHttpConstants.HTTP_REQUEST_RETURN_CODE_SUCCESS) {
-            Log.d(TAG, "doOkHttpRequest: " + result.getErrorMessage());
+            Log.d(TAG, "doOkHttpRequest: " + result.getStackTrace());
             return;
         }
-        String responseText = result.getContent().toString();
+        String responseText = result.getBody().toString();
         responseText = responseText.replace("{", "[").replace("}", "]");
         responseText = "{" + responseText.substring(1, responseText.length() - 1) + "}";
         Log.d(TAG, "doOkHttpRequest: response = " + responseText);

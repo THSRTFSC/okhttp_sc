@@ -1,5 +1,6 @@
 package com.rzfsc.okhttpdemo.Login;
 
+import android.content.Context;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
@@ -22,6 +23,10 @@ public interface LoginContract {
 
 
     interface View extends BaseView<Presenter> {
+
+        void finished();
+
+        void clearInputValue();
 
     }
 

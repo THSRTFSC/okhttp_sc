@@ -13,6 +13,8 @@ public class MIMEApplication extends Application {
 
     private static MIMEApplication sMIMEApplication = null;
 
+    private String mLoginToken = "";
+
     @Override
     public void onCreate() {
         super.onCreate();
@@ -25,5 +27,13 @@ public class MIMEApplication extends Application {
 
     public static MIMEApplication getInstance() {
         return sMIMEApplication;
+    }
+
+    public String getLoginToken() {
+        return mLoginToken;
+    }
+
+    public void setLoginToken(String loginToken) {
+        mLoginToken = loginToken;
     }
 }

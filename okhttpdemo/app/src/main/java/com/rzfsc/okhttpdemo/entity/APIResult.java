@@ -8,46 +8,54 @@ package com.rzfsc.okhttpdemo.entity;
 
 public class APIResult<T> {
 
-    private int mReturnCode;
+    private int returnCode;
 
-    private String mErrorMessage;
+    private String stackTrace;
 
-    private T mContent;
+    private T body;
+
+    public APIResult() {}
+
+    public APIResult(int returnCode, String stackTrace) {
+        super();
+        this.returnCode = returnCode;
+        this.stackTrace = stackTrace;
+    }
 
     public APIResult(int returnCode, String errorMessage, T content) {
-        this.mReturnCode = returnCode;
-        this.mErrorMessage = errorMessage;
-        this.mContent = content;
+        this.returnCode = returnCode;
+        this.stackTrace = errorMessage;
+        this.body = content;
     }
 
     public int getReturnCode() {
-        return mReturnCode;
+        return returnCode;
     }
 
     public void setReturnCode(int returnCode) {
-        mReturnCode = returnCode;
+        this.returnCode = returnCode;
     }
 
-    public String getErrorMessage() {
-        return mErrorMessage;
+    public String getStackTrace() {
+        return stackTrace;
     }
 
-    public void setErrorMessage(String errorMessage) {
-        mErrorMessage = errorMessage;
+    public void setStackTrace(String stackTrace) {
+        this.stackTrace = stackTrace;
     }
 
-    public T getContent() {
-        return mContent;
+    public T getBody() {
+        return body;
     }
 
-    public void setContent(T content) {
-        mContent = content;
+    public void setBody(T body) {
+        this.body = body;
     }
 
     @Override
     public String toString() {
         return APIResult.class.getSimpleName() +
-                " : returnCode = [" + mReturnCode +
-                "], content = [" + mContent.toString() + "]";
+                " : returnCode = [" + returnCode +
+                "], content = [" + body.toString() + "]";
     }
 }
