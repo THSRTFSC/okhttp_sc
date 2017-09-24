@@ -70,8 +70,4 @@ public class UserProfileFragment extends LifecycleFragment implements UserProfil
         this.mPresenter = presenter;
     }
 
-    @Override
-    public LifecycleRegistry getLifecycle() {
-        return super.getLifecycle();
-    }
 }

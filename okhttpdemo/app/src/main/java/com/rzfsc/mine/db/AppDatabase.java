@@ -12,7 +12,7 @@ import com.rzfsc.mine.db.entity.User;
  * Created by Alan on 17/9/14.
  */
 
-@Database(entities = {User.class}, version = 1)
+@Database(entities = {User.class}, version = 1, exportSchema = false)
 public abstract class AppDatabase extends RoomDatabase {
 
     static final String DATABASE_NAME = "mine_db";

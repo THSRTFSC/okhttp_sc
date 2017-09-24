@@ -12,7 +12,7 @@ import com.rzfsc.mine.db.entity.User;
  * Created by Alan on 17/9/3.
  */
 
-@Database(entities = {User.class}, version = 1)
+@Database(entities = {User.class}, version = 1, exportSchema = false)
 public abstract class MIMEDatabase extends RoomDatabase {
 
     public abstract UserDao userDao();
