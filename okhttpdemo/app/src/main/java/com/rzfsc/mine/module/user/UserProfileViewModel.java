@@ -1,4 +1,4 @@
-package com.rzfsc.mine.service.user;
+package com.rzfsc.mine.module.user;
 
 import android.app.Application;
 import android.arch.core.util.Function;

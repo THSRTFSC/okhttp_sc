@@ -1,9 +1,9 @@
-package com.rzfsc.mine.service.login;
+package com.rzfsc.mine.module.login;
 
 import android.util.Log;
 
 import com.rzfsc.mine.R;
-import com.rzfsc.mine.framework.BaseActivity;
+import com.rzfsc.mine.framework.base.BaseActivity;
 import com.rzfsc.mine.utils.ActivityUtils;
 
 /**

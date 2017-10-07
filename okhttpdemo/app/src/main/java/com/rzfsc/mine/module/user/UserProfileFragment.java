@@ -1,9 +1,7 @@
-package com.rzfsc.mine.service.user;
+package com.rzfsc.mine.module.user;
 
 import android.arch.lifecycle.LifecycleFragment;
-import android.arch.lifecycle.LifecycleRegistry;
 import android.arch.lifecycle.Observer;
-import android.arch.lifecycle.ViewModelProvider;
 import android.arch.lifecycle.ViewModelProviders;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -14,7 +12,6 @@ import android.view.ViewGroup;
 
 import com.rzfsc.mine.R;
 import com.rzfsc.mine.db.entity.User;
-import com.rzfsc.mine.framework.BaseFragment;
 import com.rzfsc.mine.framework.MINEApplication;
 
 /**

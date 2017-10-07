@@ -1,4 +1,4 @@
-package com.rzfsc.mine.framework;
+package com.rzfsc.mine.framework.base;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;

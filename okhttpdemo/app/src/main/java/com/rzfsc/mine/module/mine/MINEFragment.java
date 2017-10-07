@@ -1,4 +1,4 @@
-package com.rzfsc.mine.service.mine;
+package com.rzfsc.mine.module.mine;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -6,7 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.rzfsc.mine.framework.BaseFragment;
+import com.rzfsc.mine.framework.base.BaseFragment;
 
 /**
  * Copyright(c) 2017. LiBing Inc. All rights reserved.

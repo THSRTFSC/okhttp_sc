@@ -1,4 +1,4 @@
-package com.rzfsc.mine.service.user;
+package com.rzfsc.mine.module.user;
 
 /**
  * Copyright(c) 2017. LiBing Inc. All rights reserved.

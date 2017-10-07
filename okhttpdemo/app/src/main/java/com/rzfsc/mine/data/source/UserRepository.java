@@ -5,7 +5,7 @@ import android.arch.lifecycle.MutableLiveData;
 import android.util.Log;
 
 import com.rzfsc.mine.db.entity.User;
-import com.rzfsc.mine.service.user.WebService;
+import com.rzfsc.mine.module.user.WebService;
 
 import java.io.IOException;
 

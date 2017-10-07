@@ -1,7 +1,7 @@
-package com.rzfsc.mine.service.login;
+package com.rzfsc.mine.module.login;
 
-import com.rzfsc.mine.framework.BasePresenter;
-import com.rzfsc.mine.framework.BaseView;
+import com.rzfsc.mine.framework.base.BasePresenter;
+import com.rzfsc.mine.framework.base.BaseView;
 
 /**
  * Copyright(c) 2017. LiBing Inc. All rights reserved.

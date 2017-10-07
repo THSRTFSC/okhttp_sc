@@ -1,4 +1,4 @@
-package com.rzfsc.mine.service.login;
+package com.rzfsc.mine.module.login;
 
 import android.text.TextUtils;
 import android.util.Log;

@@ -1,4 +1,4 @@
-package com.rzfsc.mine.service.splash;
+package com.rzfsc.mine.module.splash;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
@@ -9,7 +9,7 @@ import android.support.v4.app.Fragment;
 import android.view.View;
 
 import com.rzfsc.mine.framework.MINEApplication;
-import com.rzfsc.mine.service.mine.MINEActivity;
+import com.rzfsc.mine.module.mine.MINEActivity;
 
 /**
  * Copyright(c) 2017. LiBing Inc. All rights reserved.

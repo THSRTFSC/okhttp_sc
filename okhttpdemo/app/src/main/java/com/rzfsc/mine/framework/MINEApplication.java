@@ -17,8 +17,6 @@ public class MINEApplication extends Application {
 
     private static MINEApplication sMIMEApplication = null;
 
-    private AppDatabase db;
-
     private String mLoginToken = "";
 
     @Override
@@ -43,7 +41,4 @@ public class MINEApplication extends Application {
         mLoginToken = loginToken;
     }
 
-    public RoomDatabase getDb() {
-        return db;
-    }
 }

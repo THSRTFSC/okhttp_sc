@@ -1,4 +1,4 @@
-package com.rzfsc.mine.service.splash;
+package com.rzfsc.mine.module.splash;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -9,7 +9,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.rzfsc.mine.R;
-import com.rzfsc.mine.framework.BaseFragment;
+import com.rzfsc.mine.framework.base.BaseFragment;
 
 /**
  * Copyright(c) 2017. LiBing Inc. All rights reserved.

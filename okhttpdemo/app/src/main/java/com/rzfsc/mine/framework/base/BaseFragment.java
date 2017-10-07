@@ -1,4 +1,4 @@
-package com.rzfsc.mine.framework;
+package com.rzfsc.mine.framework.base;
 
 import android.arch.lifecycle.LifecycleFragment;
 

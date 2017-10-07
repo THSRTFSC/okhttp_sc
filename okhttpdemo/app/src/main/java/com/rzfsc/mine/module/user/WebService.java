@@ -1,4 +1,4 @@
-package com.rzfsc.mine.service.user;
+package com.rzfsc.mine.module.user;
 
 import okhttp3.Call;
 

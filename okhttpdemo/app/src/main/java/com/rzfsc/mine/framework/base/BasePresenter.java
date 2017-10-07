@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.rzfsc.mine.framework;
+package com.rzfsc.mine.framework.base;
 
 public interface BasePresenter {
 
