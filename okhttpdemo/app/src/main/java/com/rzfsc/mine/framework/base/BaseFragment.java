@@ -9,4 +9,5 @@ import android.arch.lifecycle.LifecycleFragment;
  */
 
 public class BaseFragment extends LifecycleFragment {
+
 }

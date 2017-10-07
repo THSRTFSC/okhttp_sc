@@ -15,21 +15,23 @@
         <activity
             android:name="com.rzfsc.mine.module.splash.SplashActivity"
             android:theme="@style/AppTheme.NoTitle">
+
         </activity>
 
         <activity
             android:name="com.rzfsc.mine.module.mine.MINEActivity"
             android:theme="@style/AppTheme.NoTitle">
-        </activity>
 
-        <activity
-            android:name="com.rzfsc.mine.module.login.LoginActivity"
-            android:theme="@style/AppTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.rzfsc.mine.module.login.LoginActivity"
+            android:theme="@style/AppTheme">
         </activity>
 
         <activity
