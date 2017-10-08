@@ -46,7 +46,7 @@ public class UserProfileViewModel extends AndroidViewModel {
                     return ABSENT;
                 } else {
                     //noinspection ConstantConditions
-                    return databaseCreator.getDatabase().mUserDao().load(mUserId);
+                    return databaseCreator.getDatabase().getUserDao().load(mUserId);
                 }
             }
         });

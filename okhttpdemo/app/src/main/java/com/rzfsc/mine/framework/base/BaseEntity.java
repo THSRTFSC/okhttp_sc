@@ -5,9 +5,7 @@ package com.rzfsc.mine.framework.base;
  * <p>
  * Created by Alan on 17/10/7.
  */
-
 public class BaseEntity {
-
 
 
 }

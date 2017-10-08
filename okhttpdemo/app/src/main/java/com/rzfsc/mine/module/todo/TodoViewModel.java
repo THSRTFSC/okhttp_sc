@@ -26,10 +26,10 @@ public class TodoViewModel extends AndroidViewModel {
         return mTodo;
     }
 
-    public void init(String todoId) {
+    public void init(String todoDate) {
         if (mTodo != null) {
             return;
         }
-        mTodo = mTodoRepository.getTodo(todoId);
+        mTodo = mTodoRepository.getTodo(todoDate);
     }
 }

@@ -11,6 +11,6 @@ import android.arch.persistence.room.Entity;
 @Entity(tableName = "todo_item")
 public class TodoItem {
 
-
+    private long mId;
 
 }

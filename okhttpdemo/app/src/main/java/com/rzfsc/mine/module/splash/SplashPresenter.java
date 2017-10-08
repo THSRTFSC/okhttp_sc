@@ -48,7 +48,7 @@ public class SplashPresenter implements SplashContract.Presenter {
 
     private void startMIMEActivity() {
         Intent intent = new Intent();
-        intent.setClass(MINEApplication.getInstance().getMIMEApplicationContext(), MINEActivity.class);
+        intent.setClass(MINEApplication.getInstance().getMIMEAppContext(), MINEActivity.class);
         if (mView instanceof Fragment) {
             SplashActivity splashActivity = (SplashActivity) ((Fragment) mView).getActivity();
             splashActivity.startActivity(intent);

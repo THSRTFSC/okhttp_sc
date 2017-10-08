@@ -34,7 +34,7 @@ class DatabaseInitUtil {
     private static void insertData(AppDatabase db, User user) {
         db.beginTransaction();
         try {
-            db.mUserDao().insertAll(user);
+            db.getUserDao().insertAll(user);
             db.setTransactionSuccessful();
         } finally {
             db.endTransaction();

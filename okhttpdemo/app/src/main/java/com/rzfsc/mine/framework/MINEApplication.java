@@ -25,7 +25,7 @@ public class MINEApplication extends Application {
         sMIMEApplication = this;
     }
 
-    public Context getMIMEApplicationContext() {
+    public Context getMIMEAppContext() {
         return getApplicationContext();
     }
 

@@ -13,6 +13,10 @@ public interface TodoContract {
 
     interface View extends BaseView<Presenter> {
 
+        void initViewModel();
+
+        void refreshUI();
+
     }
 
     interface Presenter extends BasePresenter {

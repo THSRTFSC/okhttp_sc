@@ -20,6 +20,6 @@ public class TodoRepository {
     }
 
     public LiveData<Todo> getTodo(String todoId) {
-        return mTodoDao.load(todoId);
+        return mTodoDao.findById(todoId);
     }
 }
